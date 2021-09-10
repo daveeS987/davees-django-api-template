@@ -37,8 +37,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # Custom
     "b_users",
+    # Third Party
     "rest_framework",
+    # Examples
+    "z_example_apiview",
 ]
 
 MIDDLEWARE = [

@@ -2,6 +2,10 @@
 
 ## Author: Davee Sok
 
+## Links & Resources
+
+- [Creating a Custom User](https://testdriven.io/blog/django-custom-user-model/)
+
 ## Overview/ Motivation
 
 work in progess....
