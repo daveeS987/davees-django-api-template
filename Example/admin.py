@@ -3,7 +3,7 @@ from .models import Example
 
 
 @admin.register(Example)
-class AdminForApiViewExample(admin.ModelAdmin):
+class AdminForExample(admin.ModelAdmin):
     list_display = ("title", "author", "created_at")
     # prepopulated_fields = {
     #     "slug": ("title",),
