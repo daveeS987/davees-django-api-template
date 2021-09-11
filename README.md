@@ -39,16 +39,18 @@ SECRET_KEY = "django-insecure-INSERT_NEW_SECRET_KEY_HERE"
 
 - These steps will change the app name and all occurences of "Example"
 - Replace "Example" folder name (pick any name, make it lowercase)
-- Replace "Example" on line 6 in app.py with the name you picked
-- Fix urlpatterns on line 19 in a_project.settings.py
-- This step requires using a Capital Letter: Do a global search of "Example" and replace all occurences with the name you chose earlier. Remember to select "Match Case" and "Match Whole Word" option.
+- In app.py - line 6, replace "Example" with the name you picked
+- In a_project/urls.py, fix urlpatterns on line 19
+- Use a Capital for this step: Do a global search of "Example" and replace all occurences with the name you chose earlier. Remember to select "Match Case" option.
 
 ### 4. In terminal run the following commands:
 
 ```iterm
+poetry shell
 poetry install
 python manage.py makemigrations
 python manage.py migrate
+python manage.py createsuperuser
 ```
 
 ---
