@@ -14,4 +14,5 @@ Starting up a Django api can be time consuming. This template is meant to get up
 
 ## Tools & Dependencies
 
--
+- Django
+- Django Rest Framework
