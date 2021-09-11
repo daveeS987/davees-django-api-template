@@ -35,7 +35,7 @@ python -c 'from django.core.management.utils import get_random_secret_key; \
 SECRET_KEY = "django-insecure-INSERT_NEW_SECRET_KEY_HERE"
 ```
 
-### 3. Replace all occurences of "Example" with a name of your choosing
+### 3. App folder currently called "Example". Replace all occurences of "Example" with a name of your choosing
 
 - These steps will change the app name and all occurences of "Example"
 - Replace "Example" folder name (pick any name, make it lowercase)
