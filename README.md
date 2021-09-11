@@ -22,20 +22,20 @@ Starting up a Django api can be time consuming. This template is meant to get up
 
 ## Getting Started
 
-### Create a New Secret Key by running the following command in the terminal:
+### 1. Create a New Secret Key by running the following command in the terminal:
 
 ```iterm
 python -c 'from django.core.management.utils import get_random_secret_key; \
             print(get_random_secret_key())'
 ```
 
-### You will get a 50 digit key. Add new key to settings.py line 23
+### 2. You will get a 50 digit key. Add new key to settings.py line 23
 
 ```python
 SECRET_KEY = "django-insecure-INSERT_NEW_SECRET_KEY_HERE"
 ```
 
-### The name of the example model is called "Example". Replace all occurences
+### 3. The name of the example model is called "Example". Replace all occurences
 
 - Do a global search of "Example" and replace all occurences with a model name that you want. Remember to "Match Case" and "Match Whole Word". You need to use a capital letter for this step
 
@@ -44,7 +44,7 @@ SECRET_KEY = "django-insecure-INSERT_NEW_SECRET_KEY_HERE"
   - needs to match name on line 6 in app.py
   - needs to match urlpatterns on line 19 in a_project.settings.py
 
-### In terminal run the following commands:
+### 4. In terminal run the following commands:
 
 ```iterm
 poetry install
