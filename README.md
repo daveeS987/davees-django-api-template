@@ -35,14 +35,13 @@ python -c 'from django.core.management.utils import get_random_secret_key; \
 SECRET_KEY = "django-insecure-INSERT_NEW_SECRET_KEY_HERE"
 ```
 
-### 3. The name of the example model is called "Example". Replace all occurences
+### 3. Replace all occurences of "Example" with a name of your choosing
 
-- Do a global search of "Example" and replace all occurences with a model name that you want. Remember to "Match Case" and "Match Whole Word". You need to use a capital letter for this step
-
-- now replace Example folder name (this can be lowercase)
-
-  - needs to match name on line 6 in app.py
-  - needs to match urlpatterns on line 19 in a_project.settings.py
+- These steps will change the app name and all occurences of "Example"
+- Replace "Example" folder name (pick any name, make it lowercase)
+- Replace "Example" on line 6 in app.py with the name you picked
+- Fix urlpatterns on line 19 in a_project.settings.py
+- Use the same name but with a Capital Letter for the following step: Do a global search of "Example" and replace all occurences with the name you chose earlier. Remember to "Match Case" and "Match Whole Word".
 
 ### 4. In terminal run the following commands:
 
