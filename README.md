@@ -41,7 +41,7 @@ SECRET_KEY = "django-insecure-INSERT_NEW_SECRET_KEY_HERE"
 - Replace "Example" folder name (pick any name, make it lowercase)
 - Replace "Example" on line 6 in app.py with the name you picked
 - Fix urlpatterns on line 19 in a_project.settings.py
-- Use the same name but with a Capital Letter for the following step: Do a global search of "Example" and replace all occurences with the name you chose earlier. Remember to "Match Case" and "Match Whole Word".
+- This step requires using a Capital Letter: Do a global search of "Example" and replace all occurences with the name you chose earlier. Remember to select "Match Case" and "Match Whole Word" option.
 
 ### 4. In terminal run the following commands:
 
