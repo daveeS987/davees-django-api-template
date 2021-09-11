@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import ModelForApiView
+from .models import Example1
 
 
 class SerializerForApiView(serializers.ModelSerializer):
     class Meta:
-        model = ModelForApiView
+        model = Example1
         fields = "__all__"

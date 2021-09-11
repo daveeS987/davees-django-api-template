@@ -1,13 +1,13 @@
 from rest_framework import generics
 from .serializers import SerializerForApiView
-from .models import ModelForApiView
+from .models import Example1
 
 
-class ExampleList(generics.ListCreateAPIView):
-    queryset = ModelForApiView.objects.all()
+class Example1List(generics.ListCreateAPIView):
+    queryset = Example1.objects.all()
     serializer_class = SerializerForApiView
 
 
-class ExampleDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = ModelForApiView.objects.all()
+class Example1Detail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Example1.objects.all()
     serializer_class = SerializerForApiView
