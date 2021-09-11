@@ -52,6 +52,8 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
+---
+
 #### Other Commands To Know
 
 ```python
