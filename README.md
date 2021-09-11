@@ -29,6 +29,8 @@ python -c 'from django.core.management.utils import get_random_secret_key; \
             print(get_random_secret_key())'
 ```
 
+If the above step doesn't work, you may have to run `poetry shell`, then `poetry install`
+
 ### 2. Add new key to settings.py line 23
 
 ```python
@@ -39,11 +41,11 @@ SECRET_KEY = "django-insecure-INSERT_NEW_SECRET_KEY_HERE"
 
 - These steps will change the app name and all occurences of "Example"
 - Use a Capital for this step: Do a global search of "Example" and replace all occurences with your new app name. Remember to select "Match Case" option.
-- The following steps require lowercase version of your app name
+- The following steps requires a lowercase version of your app name
   - Replace "Example" folder name
   - In app.py - line 6, make sure name variable is lowercase
-  - In a_project/urls.py, fix urlpatterns on line 19
-  - In a_project/settings.py check INSTALLED_APPS to make sure your app name is lowercased
+  - In project/urls.py, fix urlpatterns on line 19 to use lowercase
+  - In project/settings.py check INSTALLED_APPS to make sure your app name is lowercased
 
 ### 4. In terminal run the following commands:
 
