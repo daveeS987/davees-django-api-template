@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ZExampleApiviewConfig(AppConfig):
+class BUsersConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "z_Example"
+    name = "a_users"
