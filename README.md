@@ -29,13 +29,13 @@ python -c 'from django.core.management.utils import get_random_secret_key; \
             print(get_random_secret_key())'
 ```
 
-### 2. You will get a 50 digit key. Add new key to settings.py line 23
+### 2. Add new key to settings.py line 23
 
 ```python
 SECRET_KEY = "django-insecure-INSERT_NEW_SECRET_KEY_HERE"
 ```
 
-### 3. App folder currently called "Example". Replace this with your app name
+### 3. App folder currently named "Example". Replace this with your app name
 
 - These steps will change the app name and all occurences of "Example"
 - Use a Capital for this step: Do a global search of "Example" and replace all occurences with your new app name. Remember to select "Match Case" option.
