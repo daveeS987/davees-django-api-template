@@ -9,8 +9,6 @@
 
 ## Overview/ Motivation
 
-work in progess....
-
 Starting up a Django api can be time consuming. This template is meant to get up and running fast
 
 ## Tools & Dependencies
@@ -23,22 +21,27 @@ Starting up a Django api can be time consuming. This template is meant to get up
 
 ## Getting Started
 
-### 1. Create a New Secret Key by running the following command in the terminal:
+### 1. Clone down repo and install dependencies
+
+```iterm
+poetry shell
+poetry install
+```
+
+### 2. Create a New Secret Key by running the following command in the terminal:
 
 ```iterm
 python -c 'from django.core.management.utils import get_random_secret_key; \
             print(get_random_secret_key())'
 ```
 
-If the above step doesn't work, you may have to run `poetry shell`, then `poetry install`
-
-### 2. Add new key to settings.py line 23
+### 3. Add new key to settings.py line 23
 
 ```python
 SECRET_KEY = "django-insecure-INSERT_NEW_SECRET_KEY_HERE"
 ```
 
-### 3. App folder currently named "Example". Replace this with your app name
+### 4. App folder currently named "Example". Replace this with your app name
 
 - These steps will change the app name and all occurences of "Example"
 - Use a Capital for this step: Do a global search of "Example" and replace all occurences with your new app name. Remember to select "Match Case" option.
@@ -48,11 +51,18 @@ SECRET_KEY = "django-insecure-INSERT_NEW_SECRET_KEY_HERE"
   - In project/urls.py, fix urlpatterns on line 19 to use lowercase
   - In project/settings.py check INSTALLED_APPS to make sure your app name is lowercased
 
-### 4. In terminal run the following commands:
+### 5a. If you want to run with docker, run the following commands:
 
 ```iterm
-poetry shell
-poetry install
+docker-compose up
+docker-compose run web python manage.py makemigrations
+docker-compose run web python manage.py migrate
+docker-compose run web python manage.py createsuperuser
+```
+
+### 5b. If you want to run in just the terminal, run the following commands:
+
+```iterm
 python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser
