@@ -6,6 +6,7 @@
 
 - [Django](https://docs.djangoproject.com/en/3.2/)
 - [Django Rest Framework](https://www.django-rest-framework.org/)
+- [Create Custom User Model](https://testdriven.io/blog/django-custom-user-model/)
 
 ## Overview/ Motivation
 
