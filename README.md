@@ -10,7 +10,7 @@
 
 ## Overview/ Motivation
 
-Starting up a Django api can be time consuming. This template is meant to get up and running fast
+Starting up a Django api can be time consuming. This template is meant to get up and running fast. Once all the wiring is done, you can make modifications to your models and tests as needed.
 
 ## Tools & Dependencies
 
@@ -72,9 +72,30 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
----
+## Notes
 
-#### Other Commands To Know
+This project makes use of a custom user that over writes django's default user model. When you create new models that need to reference user as a foreign key, you need to make the following changes:
+
+```python
+# Old Way
+
+from django.contrib.auth import get_user_model
+
+class Post(models.Model):
+    author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+
+# ----------------------------------- New Way -----------------------------------
+
+from django.conf import settings
+
+class Post(models.Model):
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+
+```
+
+In your tests, you would still use get_user_model()
+
+### Commands To Know
 
 ```python
 poetry export -f requirements.txt -o requirements.txt --without-hashes
