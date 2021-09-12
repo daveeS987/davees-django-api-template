@@ -19,6 +19,7 @@ Starting up a Django api can be time consuming. This template is meant to get up
 - Django Rest Framework
 - Black
 - Docker
+- psycopg2-binary
 
 ## Getting Started
 
@@ -62,7 +63,7 @@ python manage.py createsuperuser
 #### Other Commands To Know
 
 ```python
-poetry export -f requirements.txt -o requirements.txt
+poetry export -f requirements.txt -o requirements.txt --without-hashes
 docker-compose up
 docker-compose -d
 docker-compose down
