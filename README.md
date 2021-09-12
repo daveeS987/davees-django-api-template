@@ -44,8 +44,8 @@ SECRET_KEY = "django-insecure-INSERT_NEW_SECRET_KEY_HERE"
 ### 4. App folder currently named "Example". Replace this with your app name
 
 - These steps will change the app name and all occurences of "Example"
-- Use a Capital for this step: Do a global search of "Example" and replace all occurences with your new app name. Remember to select "Match Case" option.
-- The following steps requires a lowercase version of your app name
+- Use a CAPITAL word for this step: Do a global search of "Example" and replace all occurences with your new app name. Remember to select "Match Case" option. (There will be only 36. If you see 42, you didn't check your case)
+- The following steps requires a lowercase version of your app name(4 places you have to change)
   - Replace "Example" folder name
   - In app.py - line 6, make sure name variable is lowercase
   - In project/urls.py, fix urlpatterns on line 19 to use lowercase
