@@ -74,7 +74,21 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
-## Notes
+## Commands To Know
+
+```python
+poetry export -f requirements.txt -o requirements.txt --without-hashes
+docker-compose -d
+docker-compose up
+docker-compose up --build
+docker-compose down
+docker-compose stop
+docker-compose start
+docker-compose restart
+docker-compose logs
+```
+
+### Extra Notes
 
 This project makes use of a custom user that over writes django's default user model. When you create new models that need to reference user as a foreign key, you need to make the following changes:
 
@@ -96,17 +110,3 @@ class Post(models.Model):
 ```
 
 In your tests, you would still use get_user_model()
-
-### Commands To Know
-
-```python
-poetry export -f requirements.txt -o requirements.txt --without-hashes
-docker-compose -d
-docker-compose up
-docker-compose up --build
-docker-compose down
-docker-compose stop
-docker-compose start
-docker-compose restart
-docker-compose logs
-```
