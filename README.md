@@ -86,6 +86,22 @@ docker-compose stop
 docker-compose start
 docker-compose restart
 docker-compose logs
+
+python manage.py collectstatic -> whitenoise command to add static files
+
+# Example httpie commands through terminal:
+
+# This signs us in and grabs access and refresh tokens
+http POST :8000/api/token/ username='admin@gmail.com' password='admin'
+
+# This adds our access token to the headers in our request. Gets all blogs
+http GET :8000/api/v1/blog/ 'Authorization: Bearer ADD_ACCESS_TOKEN_HERE'
+
+# Gets One Item with pk=4
+http GET :8000/api/v1/blog/4 'Authorization: Bearer ADD_ACCESS_TOKEN_HERE'
+
+# Deletes One Item with pk=3
+http DELETE :8000/api/v1/blog/3 'Authorization: Bearer ADD_ACCESS_TOKEN_HERE'
 ```
 
 ---
