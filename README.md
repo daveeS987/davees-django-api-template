@@ -88,6 +88,8 @@ docker-compose restart
 docker-compose logs
 ```
 
+---
+
 ### Extra Notes
 
 This project makes use of a custom user that over writes django's default user model. When you create new models that need to reference user as a foreign key, you need to make the following changes:
