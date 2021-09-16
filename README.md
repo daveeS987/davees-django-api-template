@@ -22,27 +22,30 @@ Starting up a Django api can be time consuming. This template is meant to get up
 
 ## Getting Started
 
-### 1. Clone down repo and install dependencies
+### 1. Click on "Use this template" and create your repo
+
+### 2. Clone your repo and install dependencies
 
 ```iterm
+cd into your repo
 poetry shell
 poetry install
 ```
 
-### 2. Create a New Secret Key by running the following command in the terminal:
+### 3. Create a New Secret Key by running the following command in the terminal:
 
 ```iterm
 python -c 'from django.core.management.utils import get_random_secret_key; \
             print(get_random_secret_key())'
 ```
 
-### 3. Add new key to settings.py line 23
+### 4. Add new key to settings.py line 23
 
 ```python
 SECRET_KEY = "django-insecure-INSERT_NEW_SECRET_KEY_HERE"
 ```
 
-### 4. Replace all occurences of "Xxxxx" and "xxxxx" with your new app name
+### 5. Replace all occurences of "Xxxxx" and "xxxxx" with your new app name
 
 - rename "xxxxx" folder to your new app name(use lower case). Example: xxxxx -> blog
 - Do a global search of "Xxxxx" and replace all occurences with your app name
@@ -54,7 +57,7 @@ SECRET_KEY = "django-insecure-INSERT_NEW_SECRET_KEY_HERE"
   - Make sure to select "Match Case" option. [Aa]
   - (There will only be 15 matches. If you see a differnt number, you didn't check your case)
 
-### 5a. If you want to run with docker, run the following commands:
+### 6a. If you want to run with docker, run the following commands:
 
 ```iterm
 docker-compose up
@@ -63,7 +66,7 @@ docker-compose run web python manage.py migrate
 docker-compose run web python manage.py createsuperuser
 ```
 
-### 5b. If you want to run in just the terminal, run the following commands:
+### 6b. If you want to run in just the terminal, run the following commands:
 
 ```iterm
 python manage.py makemigrations
