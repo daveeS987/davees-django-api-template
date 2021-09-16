@@ -76,7 +76,7 @@ python manage.py createsuperuser
 
 ## Commands To Know
 
-### Docker:
+#### Docker:
 
 ```python
 docker-compose -d
@@ -89,7 +89,7 @@ docker-compose restart
 docker-compose logs
 ```
 
-### Httpie Commands through terminal:
+#### Httpie Commands through terminal:
 
 ```python
 
@@ -106,7 +106,7 @@ http GET :8000/api/v1/blog/4 'Authorization: Bearer ADD_ACCESS_TOKEN_HERE'
 http DELETE :8000/api/v1/blog/3 'Authorization: Bearer ADD_ACCESS_TOKEN_HERE'
 ```
 
-### Other:
+#### Other:
 
 ```python
 poetry export -f requirements.txt -o requirements.txt --without-hashes
