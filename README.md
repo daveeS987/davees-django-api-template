@@ -42,18 +42,17 @@ python -c 'from django.core.management.utils import get_random_secret_key; \
 SECRET_KEY = "django-insecure-INSERT_NEW_SECRET_KEY_HERE"
 ```
 
-### 4. App folder currently named "Example". Replace this with your app name
+### 4. Replace all occurences of "Xxxxx" and "xxxxx" with your new app name
 
-- These steps will change the app name and all occurences of "Example"
-- Do a global search of "Example" and replace all occurences with your new app name
-  - (For this step your app name needs to be a capital word) ex Example -> Blog
+- rename "xxxxx" folder to your new app name(use lower case). Example: xxxxx -> blog
+- Do a global search of "Xxxxx" and replace all occurences with your app name
+  - (For this step, app name needs to be a capital word) Example: Xxxxx -> Blog
   - Make sure to select "Match Case" option. [Aa]
-  - (There will only be 36 matches. If you see 42, you didn't check your case)
-- The following steps requires a lowercase version of your app name(4 places you have to change)
-  - Replace "Example" folder name
-  - In app.py - line 6, make sure name variable is lowercase
-  - In project/urls.py, fix urlpatterns on line 19 to use lowercase
-  - In project/settings.py check INSTALLED_APPS to make sure your app name is lowercased
+  - (There will only be 29 matches. If you see 44, you didn't check your case)
+- Do a global search of "xxxxx" and replace all occurences with your app name
+  - (For this step, app name needs to be a lower cased) Example: xxxxx -> blog
+  - Make sure to select "Match Case" option. [Aa]
+  - (There will only be 15 matches. If you see a differnt number, you didn't check your case)
 
 ### 5a. If you want to run with docker, run the following commands:
 
@@ -99,9 +98,12 @@ In your tests, you would still use get_user_model()
 
 ```python
 poetry export -f requirements.txt -o requirements.txt --without-hashes
-docker-compose up
 docker-compose -d
-docker-compose down
-docker-compose logs
+docker-compose up
 docker-compose up --build
+docker-compose down
+docker-compose stop
+docker-compose start
+docker-compose restart
+docker-compose logs
 ```
