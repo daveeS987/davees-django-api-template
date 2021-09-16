@@ -76,8 +76,9 @@ python manage.py createsuperuser
 
 ## Commands To Know
 
+Docker:
+
 ```python
-poetry export -f requirements.txt -o requirements.txt --without-hashes
 docker-compose -d
 docker-compose up
 docker-compose up --build
@@ -86,10 +87,11 @@ docker-compose stop
 docker-compose start
 docker-compose restart
 docker-compose logs
+```
 
-python manage.py collectstatic -> whitenoise command to add static files
+Httpie Commands through terminal:
 
-# Example httpie commands through terminal:
+```python
 
 # This signs us in and grabs access and refresh tokens
 http POST :8000/api/token/ username='admin@gmail.com' password='admin'
@@ -102,6 +104,13 @@ http GET :8000/api/v1/blog/4 'Authorization: Bearer ADD_ACCESS_TOKEN_HERE'
 
 # Deletes One Item with pk=3
 http DELETE :8000/api/v1/blog/3 'Authorization: Bearer ADD_ACCESS_TOKEN_HERE'
+```
+
+Other:
+
+```python
+poetry export -f requirements.txt -o requirements.txt --without-hashes
+python manage.py collectstatic -> whitenoise command to add static files
 ```
 
 ---
