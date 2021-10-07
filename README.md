@@ -4,6 +4,7 @@
 
 ## Links & Resources
 
+- [Link to this Repo](https://github.com/daveeS987/template-davees-django-api)
 - [Django](https://docs.djangoproject.com/en/3.2/)
 - [Django Rest Framework](https://www.django-rest-framework.org/)
 - [Create Custom User Model](https://testdriven.io/blog/django-custom-user-model/)
@@ -14,6 +15,7 @@ Starting up a Django api can be time consuming. This template is meant to get up
 
 ## Tools & Dependencies
 
+- poetry
 - Django
 - djangorestframework
 - djangorestframework-simplejwt
@@ -38,18 +40,32 @@ poetry shell
 poetry install
 ```
 
-#### 3. Create a New Secret Key by running the following command in the terminal:
+#### 3. Get New Django Secret Key by running the following command in the terminal:
 
 ```iterm
 python -c 'from django.core.management.utils import get_random_secret_key; \
             print(get_random_secret_key())'
 ```
 
-#### 4. Add new key to settings.py line 23
+#### 4. Edit .env.txt file with created Django Secret Key and Database info from Elephant Sql
 
-```python
-SECRET_KEY = "django-insecure-INSERT_NEW_SECRET_KEY_HERE"
+```env
+SECRET_KEY=django-insecure-REPLACE_THIS_AREA_WITH_DJANGO_SECRET_KEY
+DEBUG=False
+
+ALLOWED_HOSTS=0.0.0.0,127.0.0.1,localhost
+ALLOW_ALL_ORIGINS=True
+ALLOWED_ORIGINS=http://localhost:3000
+
+DATABASE_ENGINE=django.db.backends.postgresql
+DATABASE_NAME= **Get from Elephant sql**
+DATABASE_USER= **Get from Elephant sql**
+DATABASE_PASSWORD= **Get from Elephant sql**
+DATABASE_HOST= **Get from Elephant sql**
+DATABASE_PORT=5432
 ```
+
+- remember to rename .env.txt to .env
 
 #### 5. Replace all occurences of "Xxxxx" and "xxxxx" with your new app name
 
@@ -63,21 +79,27 @@ SECRET_KEY = "django-insecure-INSERT_NEW_SECRET_KEY_HERE"
   - Make sure to select "Match Case" option. [Aa]
   - (There will only be 15 matches. If you see a differnt number, you didn't check your case)
 
-#### 6a. If you want to run with docker, run the following commands:
+#### 6. Create requirements.txt File
+
+```terminal
+poetry export -f requirements.txt -o requirements.txt --without-hashes
+```
+
+#### 7. Create Static Files
+
+```terminal
+python manage.py collectstatic
+```
+
+#### 7. Run following commands to start Docker:
+
+- make sure docker is running on your computer
 
 ```iterm
 docker-compose up
 docker-compose run web python manage.py makemigrations
 docker-compose run web python manage.py migrate
 docker-compose run web python manage.py createsuperuser
-```
-
-#### 6b. If you want to run in just the terminal, run the following commands:
-
-```iterm
-python manage.py makemigrations
-python manage.py migrate
-python manage.py createsuperuser
 ```
 
 ## Commands To Know
@@ -108,15 +130,8 @@ http GET :8000/api/v1/blog/ 'Authorization: Bearer ADD_ACCESS_TOKEN_HERE'
 # Gets One Item with pk=4
 http GET :8000/api/v1/blog/4 'Authorization: Bearer ADD_ACCESS_TOKEN_HERE'
 
-# Deletes One Item with pk=3
-http DELETE :8000/api/v1/blog/3 'Authorization: Bearer ADD_ACCESS_TOKEN_HERE'
-```
-
-#### Other:
-
-```python
-poetry export -f requirements.txt -o requirements.txt --without-hashes
-python manage.py collectstatic -> whitenoise command to add static files
+# Deletes One Item with pk=5
+http DELETE :8000/api/v1/blog/5 'Authorization: Bearer ADD_ACCESS_TOKEN_HERE'
 ```
 
 ---
