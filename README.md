@@ -94,7 +94,7 @@ docker-compose logs
 ```python
 
 # This signs us in and grabs access and refresh tokens
-http POST :8000/api/token/ username='admin@gmail.com' password='admin'
+http POST :8000/api/token/ email='admin@gmail.com' password='admin'
 
 # This adds our access token to the headers in our request. Gets all blogs
 http GET :8000/api/v1/blog/ 'Authorization: Bearer ADD_ACCESS_TOKEN_HERE'
