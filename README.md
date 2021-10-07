@@ -47,7 +47,7 @@ python -c 'from django.core.management.utils import get_random_secret_key; \
             print(get_random_secret_key())'
 ```
 
-#### 4. Edit .env.txt file with created Django Secret Key and Database info from Elephant Sql
+#### 4. Edit .env.txt file inside a_project folder with created Django Secret Key and Database info from Elephant Sql
 
 ```env
 SECRET_KEY=django-insecure-REPLACE_THIS_AREA_WITH_DJANGO_SECRET_KEY
