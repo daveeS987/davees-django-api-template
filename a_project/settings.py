@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     # Third Party
     "rest_framework",
     # Custom
-    "a_users",
+    "accounts",
     "xxxxx",
 ]
 
@@ -133,7 +133,7 @@ STATIC_URL = "/static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-AUTH_USER_MODEL = "a_users.CustomUser"
+AUTH_USER_MODEL = "accounts.CustomUser"
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [

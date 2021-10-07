@@ -15,9 +15,15 @@ Starting up a Django api can be time consuming. This template is meant to get up
 ## Tools & Dependencies
 
 - Django
-- Django Rest Framework
-- Black
+- djangorestframework
+- djangorestframework-simplejwt
+- django-cors-headers
+- django-environ
+- gunicorn
 - Docker
+- ElephantSQL
+- whitenoise
+- Black
 - psycopg2-binary
 
 ## Getting Started
